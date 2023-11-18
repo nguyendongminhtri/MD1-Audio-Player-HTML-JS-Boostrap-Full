@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', Helvetical, sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    position: relative;
+    height: 80%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    justify-content: center;
+    background: linear-gradient(to left, #f802b3, #3794ef);
+}
+
+.main #logo {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    font-size: 25px;
+    color: #ccc;
+}
+
+/*CSS left part & right part*/
+.right, .left {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/*CSS avatar song */
+.left img {
+    position: relative;
+    padding: 20px 20px 20px 20px;
+    height: 250px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 1px 10px 20px 20px rgba(240, 240, 240, 0.7);
+    animation: example 30s ease infinite;
+    animation-name: example;
+    animation-duration: 30s;
+    /*animation-iteration-count: 3;*/
+}
+@keyframes example {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.5, 1.5);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+    0%   {background-color: #e1d4d4; left:200px; top:0px;}
+    25%  {background-color: #67f1f1; left:200px; top:0px;}
+    50%  {background-color: #c694ef; left:200px; top:0px;}
+    75%  {background-color: #c262e1; left:0px; top:200px;}
+    100% {background-color: #ef6767; left:0px; top:0px;}
+}
+
+/* CSS Volume */
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 50%;
+    height: 2px;
+    margin: 0 15px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background: #f15a29;
+    border-radius: 50%;
+}
+
+.lef .volume {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff0000;
+}
+
+.left .volume p {
+    font-size: 20px;
+}
+
+.left .volume i {
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 15px;
+    background: #97f334;
+    font-size: 25px;
+}
+
+.left .volume i:hover {
+    background: rgb(250, 71, 71);
+}
+
+.volume #volume_show {
+    padding: 8px 12px;
+    margin: 0 5px 0 0;
+    background: rgba(245, 245, 245, 0.1);
+}
+
+.right .middle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right .middle button {
+    border: none;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    transition: 0.5s;
+    background: rgb(147, 165, 241);
+    font-size: 25px;
+}
+
+.right button:hover {
+    background: #f15a29;
+    font-size: 80%;
+}
+
+.right #title {
+    position: absolute;
+    top: 40px;
+    left: 35%;
+    transform: translateX(-50%);
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 2vw;
+}
+
+.right #artist {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: capitalize;
+    color: #fff;
+    /*font-size: 18px;*/
+    font-size: 1.5vw;
+    font-family: "Segoe Script";
+}
+
+.right .show_song_no {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 30px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 25px 5px;
+    color: #fff;
+    background: rgb(159,241,74);
+    border-radius: 5px;
+}
+.right #auto {
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    padding: 8px 10px;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+    outline: none;
+    border-radius: 10px;
+}
+.right #auto:hover {
+    background: #ff8a65;
+}
+#play {
+    background: #ff8a65;
+}
+#play:hover {
+    background: #ffc400;
+}
+.right .duration {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20px;
+    margin-top: 40px;
+}
+
